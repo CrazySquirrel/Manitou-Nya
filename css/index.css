@@ -1,0 +1,141 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #252525;
+  font-family: 'Roboto', sans-serif;
+  color: #f2f2f2;
+}
+
+a {
+  color: #f2f2f2;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main__title {
+  font-size: 2em;
+  line-height: 1.45;
+}
+
+.main__text {
+  font-size: 1em;
+  line-height: 1.45;
+  margin: 1em 0 0 0;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+
+.social-links {
+  margin: 2em 0 0 0;
+}
+
+.social-links__item {
+  margin: 0 .5em;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+}
+
+.social-links__item:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 1s;
+}
+
+.social-links__item:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  display: block;
+  background: #f2f2f2;
+  transition: transform .2s;
+}
+
+.social-links__item-twitter:before {
+  background: #1DA1F2;
+}
+
+.social-links__item-vk:before {
+  background: #2787F5;
+}
+
+.social-links__item-facebook:before {
+  background: #4267B2;
+}
+
+.social-links__item:hover:before {
+  opacity: 1;
+  transform: scale(100, 100);
+}
+
+.social-links__item:hover:after {
+  transform: scale(0, 1);
+}
